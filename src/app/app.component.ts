@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Git-Search-Application';
+  public githubUser1: GithubUser;
+
+  constructor() {
+    this.githubUser1 = new GithubUser(false, null, '');
+  }
 }
