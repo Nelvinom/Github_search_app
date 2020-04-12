@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { GithubUser } from '../github-user'
+import { GithubUser } from '../github-user';
+import { GithubService } from '../Service/github.service';
+import 'rxjs/add/operator/map';
 @Component({
   selector: 'app-searchform',
   templateUrl: './searchform.component.html',

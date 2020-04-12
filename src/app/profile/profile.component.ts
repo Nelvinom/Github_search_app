@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GithubUser} from '../github-user'
+import { GithubUser} from '../github-user';
+
 
 @Component({
   selector: 'app-profile',
