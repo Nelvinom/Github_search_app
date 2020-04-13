@@ -27,6 +27,7 @@ export class SearchService {
       ); 
     }
   }
+  
   //returns the response
   public_searchEntries(term){
     return this.searchEntries(term);

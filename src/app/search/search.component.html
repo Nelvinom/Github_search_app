@@ -1,1 +1,9 @@
-<p>search works!</p>
+<section>
+    <form [formGroup]="searchForm">
+      <input type="text" (keyup)="searchTerm.next($event)" formControlName="search" placeholder="Search repos---"/>
+      <div *nglf="loading">
+          <p class="search-message">Search</p>
+          <div class="lds-ellipis"><div><div><div><div></div></div></div></div></div>
+      </div>
+    </form>
+</section>
