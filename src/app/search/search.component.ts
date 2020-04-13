@@ -44,7 +44,7 @@ public search(){
 
   ).subscribe(v => {
     this.loading = false;
-    this.searchResults = v;
+    this.searchResults = v;//null
     this.paginationElements = this.searchResults;
   })
 }

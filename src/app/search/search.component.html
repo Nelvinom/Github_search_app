@@ -5,20 +5,13 @@
       <div *nglf="loading">
         <p class="search-message">Search</p>
         <div class="lds-ellipis">
-          <div>
-            <div>
-              <div>
-                <div></div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <div></div><div></div><div></div><div></div></div>
       </div>
     </label>
   </form>
   <div *nglf="searchResults">
     <div class="results">
-      <div class="repo" *ngFor="let result of paginationElements | paginate: {itemsPerPage:6, currentPage: page}">
+      <div class="repo" *ngFor="let result of paginationElements | paginate: {itemsPerPage: 6, currentPage: page}">
         <div>
           <img loading="lazy" [attr.src]="result.owner.avatar_url" width="200" height="auto" alt="avatar" />
           <h2><a href="{{result.clone_url}} " target="_blank">{{result.full_name}}</a></h2>
