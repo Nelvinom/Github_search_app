@@ -12,11 +12,12 @@ export class SearchService {
 
   public baseUrl =  "https://api.github.com/search/respositories";
   public searchResults: any;
-  //makes HTTP call to the Apt
+
+  //makes HTTP call to the Api
   public searchEntries(term):Observable<any>{
     if(term ===""){
      console.log("Not Defined"); 
-    //  return empty()
+    return of(null)
     }else {
       let params = {q: term }
       return this.httpClient.get(this.baseUrl, {params}).pipe(

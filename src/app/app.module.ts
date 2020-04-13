@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import{ NgxPaginationModule } from 'ngx-pagination'
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

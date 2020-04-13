@@ -43,7 +43,7 @@ public search(){
      }),
 
   ).subscribe(v => {
-    this.loading = true;
+    this.loading = false;
     this.searchResults = v;
     this.paginationElements = this.searchResults;
   })
