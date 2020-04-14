@@ -23,7 +23,7 @@ export class SearchService {
       return this.httpClient.get(this.baseUrl, {params}).pipe(
         map(response =>{
           console.log(response);
-          return this.searchResults = response["items"]
+          return this.searchResults = response["items"];
         })
       ); 
     }

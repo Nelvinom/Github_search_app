@@ -14,7 +14,7 @@ export class SearchComponent implements OnInit {
   constructor() { }
 
 public loading: boolean;
-public searchTerm=  new Subject<string>();
+public searchTerm =  new Subject<string>();
 public searchResults: any;
 public paginationElements: any;
 public errorMessage:any;  
@@ -44,7 +44,7 @@ public search(){
 
   ).subscribe(v => {
     this.loading = false;
-    this.searchResults = v;//null
+    this.searchResults = v;//null 
     this.paginationElements = this.searchResults;
   })
 }
