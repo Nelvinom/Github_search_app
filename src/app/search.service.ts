@@ -15,7 +15,7 @@ export class SearchService {
 
   //makes HTTP call to the Api
   public searchEntries(term):Observable<any>{
-    if(term ===""){
+    if(term === ""){
      console.log("Not Defined"); 
     return of(null)
     }else {
@@ -30,7 +30,7 @@ export class SearchService {
   }
   
   //returns the response
-  public_searchEntries(term){
+  public _searchEntries(term){
     return this.searchEntries(term);
   }
 }

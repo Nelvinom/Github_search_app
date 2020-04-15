@@ -33,7 +33,7 @@ public search(){
     distinctUntilChanged(),
     switchMap(term => {
       this.loading = true;
-      return this.searchService._searchEntries (term);
+      return this.searchService. _searchEntries (term);
     }),
      catchError((e) =>{
       console.log(e);
