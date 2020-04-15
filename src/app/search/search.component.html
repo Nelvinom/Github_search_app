@@ -2,14 +2,14 @@
   <form [formGroup]="searchForm">
     <label>
       <input type="text" (keyup)="searchTerm.next($event)" formControlName="search" placeholder="Search repos---" />
-      <div *nglf='loading'>
+      <div *ngIf='loading'>
         <p class="search-message">Search</p>
         <div class="lds-ellipis">
           <div></div><div></div><div></div><div></div></div>
       </div>
     </label>
   </form>
-  <div *nglf="searchResults">
+  <div *ngIf="searchResults">
     <div class="results">
       <div class="repo" *ngFor="let result of paginationElements | paginate: {itemsPerPage: 6, currentPage: page}">
         <div>
@@ -23,7 +23,7 @@
     </div>
     <pagination-controls (pageChange)="page = $event"></pagination-controls>
   </div>
-  <div *nglf="errorMessage" class="errorMessage">
+  <div *ngIf="errorMessage" class="errorMessage">
     <h2>Error</h2>
     <p class="error">{{errorMessage}}</p>
   </div>
