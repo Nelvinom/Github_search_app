@@ -10,7 +10,7 @@ export class SearchService {
 
   constructor( private httpClient:HttpClient) { }
 
-  public baseUrl =  "https://api.github.com/search/respositories/";
+  public baseUrl =  "https://api.github.com/search/repositories";
   public searchResults: any;
 
   //makes HTTP call to the Api
