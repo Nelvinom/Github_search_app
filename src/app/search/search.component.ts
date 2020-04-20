@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import{ FormGroup, FormControl, Validator, Validators } from '@angular/forms';
+import{ FormGroup, FormControl, Validators } from '@angular/forms';
 import { Subject, throwError } from 'rxjs'; 
 import { map, debounceTime, distinctUntilChanged, switchMap, catchError, retry, retryWhen } from 'rxjs/operators';
 import { SearchService } from '../search.service';
@@ -11,7 +11,7 @@ import { SearchService } from '../search.service';
 export class SearchComponent implements OnInit {
   [x: string]: any;
 
-  constructor() { }
+  constructor(private searchService: SearchService) { }
 
 public loading: boolean;
 public searchTerm =  new Subject<string>();

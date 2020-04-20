@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of, empty } from 'rxjs';
-import { map } from 'rxjs/operators'; 
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ export class SearchService {
 
   constructor( private httpClient:HttpClient) { }
 
-  public baseUrl =  "https://api.github.com/search/respositories";
+  public baseUrl =  "https://api.github.com/search/respositories/";
   public searchResults: any;
 
   //makes HTTP call to the Api
